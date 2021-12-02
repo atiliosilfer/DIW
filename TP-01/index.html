@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta charset="utf-8" />
+    <title>DIW - TP 01</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body onload="aoCarregar()">
+    <header class="container header">
+      <nav
+        class="
+          navbar navbar-dark
+          bg-dark
+          navbar-expand-lg navbar-light
+          bg-light
+        "
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#perfil">Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projetos">Seguidores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experiencia">Experiência</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#repositorios">Repositórios GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#conteudo">Organizações</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <div class="input-group rounded searchDiv">
+              <span class="border-0 searchIcon" id="search-addon">
+                <i class="fa fa-search"></i>
+              </span>
+              <input
+                type="search"
+                class="searchDiv"
+                placeholder="Pesquisar"
+                aria-label="Search"
+                aria-describedby="search-addon"
+              />
+            </div>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container main">
+      <div class="row">
+        <div class="col-12">
+          <!--Perfil-->
+          <a name="perfil"></a>
+          <div class="row divPerfil" id="perfilId"></div>
+
+          <!--Card de Projetos-->
+
+          <a name="projetos"></a>
+          <div class="row" id="seguidoresId"></div>
+
+          <a name="experiencia"></a>
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 margin">
+              <h2><strong>Experiência</strong></h2>
+            </div>
+          </div>
+
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-5 col-lg-3 img-exp">
+                <img src="imagens/logo-puc-minas.png" style="width: inherit" />
+              </div>
+              <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+                <h5>Monitor de Ciência da Computação</h5>
+                <p>
+                  Durante meu período como monitor, eu era o principal
+                  responsável por ajudar com as dúvidas sobre a disciplina de
+                  Algoritmo e Estrutura de Dados III, porém ajudava em qualquer
+                  dúvida que os alunos tivessem.
+                </p>
+                <h4 class="lead">Período: 08/2019 a 01/2020</h4>
+              </div>
+            </div>
+            <hr class="my-4" />
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-5 col-lg-3 img-exp">
+                <img
+                  src="imagens/logo-grupo-otimiza.png"
+                  style="width: inherit"
+                />
+              </div>
+              <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+                <h5>Estagiário de Desenvolvimento</h5>
+                <p>
+                  Durante meu período como estagiário de desenvolvimento no
+                  Grupo Otimiza aprendi muitas tecnologias como: .NET, C# e
+                  Angular. Além disso expandi meus conhecimentos sobre controle
+                  de versionamento, banco de dados e ganhei muita experiência
+                  como desenvolvedor.
+                </p>
+                <h4 class="lead">Período: 01/2020 a 10/2020</h4>
+              </div>
+            </div>
+            <hr class="my-4" />
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-5 col-lg-3 img-exp">
+                <img src="imagens/logo-dti-preta.png" />
+              </div>
+              <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+                <h5>Estagiário de Desenvolvimento</h5>
+                <p>
+                  No meu estágio como desenvolvedor na DTI Digital trabalhei com
+                  back-end em uma plataforma low code chamada SYDLE ONE que
+                  utiliza scripts em JavaScript para seu funcionamento. No
+                  momento fui transferido para um projeto onde trabalho com
+                  React, onde estou evoluindo bastante como Front-end e pretendo
+                  me manter por hora.
+                </p>
+                <h4 class="lead">Período: 10/2020 até o momento</h4>
+              </div>
+            </div>
+          </div>
+
+          <a name="repositorios"></a>
+          <div class="row" id="repositoriosId"></div>
+
+          <a name="conteudo"></a>
+          <div class="row" id="equipesId"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center text-lg-start footer">
+      <div
+        class="container footerDiv"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        <div class="text-center p-3 col-9 col-sm-9 col-md-10 col-lg-10">
+          © Copyright 2021 - Disciplina de Desenvolvimento de Interfaces Web -
+          <strong>ICEI PUC Minas</strong>
+        </div>
+        <div class="col-3 col-sm-3 col-md-2 col-lg-2">
+          <img src="imagens/logo.png" class="imageFooter" />
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function carregaPerfil() {
+        let xhr = new XMLHttpRequest();
+
+        xhr.onload = function () {
+          let data = JSON.parse(this.responseText);
+
+          let perfilStr = `<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+              <img
+                src="${data.avatar_url}"
+                class="img-fluid center"
+                alt="perfil"
+              />
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 perfilInfo">
+              <div>
+                <h4><strong>${data.name}</strong></h4>
+                <h6>
+                  <strong>Bio:</strong> ${data.bio}
+                </h6>
+              </div>
+
+              <div>
+
+                <div class="fa-3x linkHef">
+                  <a href="${data.html_url}" target="_blank">
+                    <i class="fa fa-github linkHef"></i>
+                  </a>
+                </div>
+              </div>
+            </div>`;
+
+          document.getElementById("perfilId").innerHTML = perfilStr;
+        };
+
+        xhr.onerror = function () {
+          alert(
+            `Erro na requisição \nCódigo: ${this.status} - ${this.statusText}`
+          );
+        };
+
+        xhr.open("GET", "https://api.github.com/users/atiliosilfer");
+        xhr.send();
+      }
+    </script>
+
+    <script>
+      function carregaRepositorios() {
+        let xhr = new XMLHttpRequest();
+
+        xhr.onload = function () {
+          let data = JSON.parse(this.responseText);
+
+          let repositorios = `
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 margin">
+              <h2><strong>Repositórios GitHub</strong></h2>
+            </div>
+          
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 display-flex-column">
+              <div class="flex">
+                <i class="fa fa-folder fa-2x folderIcon" aria-hidden="true"></i>
+                <h3 class="margin">
+                  <a
+                    href="${data[0].html_url}"
+                    class="linkHef"
+                    target="_blank"
+                    >${data[0].name}</a
+                  >
+                </h3>
+              </div>
+              <p class="rep-text">
+                <strong>Descrição:</strong> ${
+                  data[0].description ?? "Repositório sem descrição"
+                }
+              </p>
+              <p class="rep-text">
+                <strong>Linguagem:</strong> ${data[0].language}
+              </p>
+              <p class="rep-text">
+                <strong>Forks:</strong> ${data[0].forks}
+              </p>
+              <strong>Atualizado em: </strong>${new Date(data[0].updated_at)}
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 display-flex-column">
+              <div class="flex">
+                <i class="fa fa-folder fa-2x folderIcon" aria-hidden="true"></i>
+                <h3 class="margin">
+                  <a
+                    href="${data[1].html_url}"
+                    class="linkHef"
+                    target="_blank"
+                    >${data[1].name}</a
+                  >
+                </h3>
+              </div>
+              <p class="rep-text">
+                <strong>Descrição:</strong> ${
+                  data[1].description ?? "Repositório sem descrição"
+                }
+              </p>
+              <p class="rep-text">
+                <strong>Linguagem:</strong> ${data[1].language}
+              </p>
+              <p class="rep-text">
+                <strong>Forks:</strong> ${data[1].forks}
+              </p>
+              <strong>Atualizado em: </strong>${new Date(data[1].updated_at)}
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 display-flex-column">
+              <div class="flex">
+                <i class="fa fa-folder fa-2x folderIcon" aria-hidden="true"></i>
+                <h3 class="margin">
+                  <a
+                    href="${data[2].html_url}"
+                    class="linkHef"
+                    target="_blank"
+                    >${data[2].name}</a
+                  >
+                </h3>
+              </div>
+              <p class="rep-text">
+                <strong>Descrição:</strong> ${
+                  data[2].description ?? "Repositório sem descrição"
+                }
+              </p>
+              <p class="rep-text">
+                <strong>Linguagem:</strong> ${data[2].language}
+              </p>
+              <p class="rep-text">
+                <strong>Forks:</strong> ${data[2].forks}
+              </p>
+              <strong>Atualizado em: </strong>${new Date(data[2].updated_at)}
+            </div>
+          `;
+
+          document.getElementById("repositoriosId").innerHTML = repositorios;
+        };
+
+        xhr.onerror = function () {
+          alert(
+            `Erro na requisição \nCódigo: ${this.status} - ${this.statusText}`
+          );
+        };
+
+        xhr.open(
+          "GET",
+          "https://api.github.com/users/atiliosilfer/repos?per_page=3"
+        );
+        xhr.send();
+      }
+    </script>
+
+    <script>
+      function aoCarregar() {
+        carregaPerfil();
+        carregaRepositorios();
+        carregaSeguidores();
+        carregaOrganizacoes();
+      }
+    </script>
+
+    <script>
+      function carregaSeguidores() {
+        let xhr = new XMLHttpRequest();
+
+        xhr.onload = function () {
+          let data = JSON.parse(this.responseText);
+
+          let seguidores = `
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 margin">
+              <h2><strong>Seguidores</strong></h2>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="${data[0].avatar_url}"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <a href="${data[0].html_url}" target="_blank"><h5 class="card-title" >${data[0].login}</h5></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="${data[1].avatar_url}"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <a href="${data[1].html_url}" target="_blank"><h5 class="card-title" >${data[1].login}</h5></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="${data[2].avatar_url}"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <a href="${data[2].html_url}" target="_blank"><h5 class="card-title" >${data[2].login}</h5></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="${data[3].avatar_url}"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <a href="${data[3].html_url}" target="_blank"><h5 class="card-title" >${data[3].login}</h5></a>
+                </div>
+              </div>
+            </div>
+          `;
+
+          document.getElementById("seguidoresId").innerHTML = seguidores;
+        };
+
+        xhr.onerror = function () {
+          alert(
+            `Erro na requisição \nCódigo: ${this.status} - ${this.statusText}`
+          );
+        };
+
+        xhr.open(
+          "GET",
+          "https://api.github.com/users/atiliosilfer/followers?per_page=4"
+        );
+        xhr.send();
+      }
+    </script>
+
+    <script>
+      function carregaOrganizacoes() {
+        let xhr = new XMLHttpRequest();
+
+        xhr.onload = function () {
+          let data = JSON.parse(this.responseText);
+
+          let equipes = `
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 margin">
+              <h2><strong>Organizações do GitHub</strong></h2>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="${data[0].avatar_url}"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title" >${data[0].login}</h3>
+                  <h5 class="card-title" >${data[0].description ?? ""}</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="${data[1].avatar_url}"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title" >${data[1].login}</h3>
+                  <h5 class="card-title" >${data[1].description ?? ""}</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="${data[2].avatar_url}"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title" >${data[2].login}</h3>
+                  <h5 class="card-title" >${data[2].description ?? ""}</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+              <div class="card">
+                <img
+                  src="${data[3].avatar_url}"
+                  class="card-img-top"
+                />
+                <div class="card-body">
+                  <h3 class="card-title" >${data[3].login}</h3>
+                  <h5 class="card-title" >${data[3].description ?? ""}</h5>
+                </div>
+              </div>
+            </div>`;
+
+          document.getElementById("equipesId").innerHTML = equipes;
+        };
+
+        xhr.onerror = function () {
+          alert(
+            `Erro na requisição \nCódigo: ${this.status} - ${this.statusText}`
+          );
+        };
+
+        xhr.open("GET", "https://api.github.com/organizations?per_page=4");
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
