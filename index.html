@@ -222,10 +222,10 @@
 
               <div>
 
-                <div class="fa-3x linkHef">
-                  <a href="${data.html_url}" target="_blank">
-                    <i class="fa fa-github linkHef"></i>
-                  </a>
+                <div class="linkHef">
+                  <h6><a href="${data.html_url}" target="_blank">
+                    Link para o meu GitHub
+                  </a></h6>
                 </div>
               </div>
             </div>`;
@@ -248,6 +248,8 @@
       function carregaRepositorios() {
         let xhr = new XMLHttpRequest();
 
+        const pos = Math.floor(Math.random() * 16);
+
         xhr.onload = function () {
           let data = JSON.parse(this.responseText);
 
@@ -261,25 +263,27 @@
                 <i class="fa fa-folder fa-2x folderIcon" aria-hidden="true"></i>
                 <h3 class="margin">
                   <a
-                    href="${data[0].html_url}"
+                    href="${data[pos + 0].html_url}"
                     class="linkHef"
                     target="_blank"
-                    >${data[0].name}</a
+                    >${data[pos + 0].name}</a
                   >
                 </h3>
               </div>
               <p class="rep-text">
                 <strong>Descrição:</strong> ${
-                  data[0].description ?? "Repositório sem descrição"
+                  data[pos + 0].description ?? "Repositório sem descrição"
                 }
               </p>
               <p class="rep-text">
-                <strong>Linguagem:</strong> ${data[0].language}
+                <strong>Linguagem:</strong> ${data[pos + 0].language}
               </p>
               <p class="rep-text">
-                <strong>Forks:</strong> ${data[0].forks}
+                <strong>Forks:</strong> ${data[pos + 0].forks}
               </p>
-              <strong>Atualizado em: </strong>${new Date(data[0].updated_at)}
+              <strong>Atualizado em: </strong>${new Date(
+                data[pos + 0].updated_at
+              )}
             </div>
 
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 display-flex-column">
@@ -287,25 +291,27 @@
                 <i class="fa fa-folder fa-2x folderIcon" aria-hidden="true"></i>
                 <h3 class="margin">
                   <a
-                    href="${data[1].html_url}"
+                    href="${data[pos + 1].html_url}"
                     class="linkHef"
                     target="_blank"
-                    >${data[1].name}</a
+                    >${data[pos + 1].name}</a
                   >
                 </h3>
               </div>
               <p class="rep-text">
                 <strong>Descrição:</strong> ${
-                  data[1].description ?? "Repositório sem descrição"
+                  data[pos + 1].description ?? "Repositório sem descrição"
                 }
               </p>
               <p class="rep-text">
-                <strong>Linguagem:</strong> ${data[1].language}
+                <strong>Linguagem:</strong> ${data[pos + 1].language}
               </p>
               <p class="rep-text">
-                <strong>Forks:</strong> ${data[1].forks}
+                <strong>Forks:</strong> ${data[pos + 1].forks}
               </p>
-              <strong>Atualizado em: </strong>${new Date(data[1].updated_at)}
+              <strong>Atualizado em: </strong>${new Date(
+                data[pos + 1].updated_at
+              )}
             </div>
 
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 display-flex-column">
@@ -313,25 +319,27 @@
                 <i class="fa fa-folder fa-2x folderIcon" aria-hidden="true"></i>
                 <h3 class="margin">
                   <a
-                    href="${data[2].html_url}"
+                    href="${data[pos + 2].html_url}"
                     class="linkHef"
                     target="_blank"
-                    >${data[2].name}</a
+                    >${data[pos + 2].name}</a
                   >
                 </h3>
               </div>
               <p class="rep-text">
                 <strong>Descrição:</strong> ${
-                  data[2].description ?? "Repositório sem descrição"
+                  data[pos + 2].description ?? "Repositório sem descrição"
                 }
               </p>
               <p class="rep-text">
-                <strong>Linguagem:</strong> ${data[2].language}
+                <strong>Linguagem:</strong> ${data[pos + 2].language}
               </p>
               <p class="rep-text">
-                <strong>Forks:</strong> ${data[2].forks}
+                <strong>Forks:</strong> ${data[pos + 2].forks}
               </p>
-              <strong>Atualizado em: </strong>${new Date(data[2].updated_at)}
+              <strong>Atualizado em: </strong>${new Date(
+                data[pos + 2].updated_at
+              )}
             </div>
           `;
 
@@ -346,7 +354,7 @@
 
         xhr.open(
           "GET",
-          "https://api.github.com/users/atiliosilfer/repos?per_page=3"
+          "https://api.github.com/users/atiliosilfer/repos?per_page=20"
         );
         xhr.send();
       }
@@ -365,6 +373,8 @@
       function carregaSeguidores() {
         let xhr = new XMLHttpRequest();
 
+        const pos = Math.floor(Math.random() * 11);
+
         xhr.onload = function () {
           let data = JSON.parse(this.responseText);
 
@@ -376,11 +386,15 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="card">
                 <img
-                  src="${data[0].avatar_url}"
+                  src="${data[pos + 0].avatar_url}"
                   class="card-img-top"
                 />
                 <div class="card-body">
-                  <a href="${data[0].html_url}" target="_blank"><h5 class="card-title" >${data[0].login}</h5></a>
+                  <a href="${
+                    data[pos + 0].html_url
+                  }" target="_blank"><h5 class="card-title" >${
+            data[pos + 0].login
+          }</h5></a>
                 </div>
               </div>
             </div>
@@ -388,11 +402,15 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="card">
                 <img
-                  src="${data[1].avatar_url}"
+                  src="${data[pos + 1].avatar_url}"
                   class="card-img-top"
                 />
                 <div class="card-body">
-                  <a href="${data[1].html_url}" target="_blank"><h5 class="card-title" >${data[1].login}</h5></a>
+                  <a href="${
+                    data[pos + 1].html_url
+                  }" target="_blank"><h5 class="card-title" >${
+            data[pos + 1].login
+          }</h5></a>
                 </div>
               </div>
             </div>
@@ -400,11 +418,15 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="card">
                 <img
-                  src="${data[2].avatar_url}"
+                  src="${data[pos + 2].avatar_url}"
                   class="card-img-top"
                 />
                 <div class="card-body">
-                  <a href="${data[2].html_url}" target="_blank"><h5 class="card-title" >${data[2].login}</h5></a>
+                  <a href="${
+                    data[pos + 2].html_url
+                  }" target="_blank"><h5 class="card-title" >${
+            data[pos + 2].login
+          }</h5></a>
                 </div>
               </div>
             </div>
@@ -412,11 +434,15 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="card">
                 <img
-                  src="${data[3].avatar_url}"
+                  src="${data[pos + 3].avatar_url}"
                   class="card-img-top"
                 />
                 <div class="card-body">
-                  <a href="${data[3].html_url}" target="_blank"><h5 class="card-title" >${data[3].login}</h5></a>
+                  <a href="${
+                    data[pos + 3].html_url
+                  }" target="_blank"><h5 class="card-title" >${
+            data[pos + 3].login
+          }</h5></a>
                 </div>
               </div>
             </div>
@@ -433,7 +459,7 @@
 
         xhr.open(
           "GET",
-          "https://api.github.com/users/atiliosilfer/followers?per_page=4"
+          "https://api.github.com/users/atiliosilfer/followers?per_page=15"
         );
         xhr.send();
       }
@@ -442,6 +468,8 @@
     <script>
       function carregaOrganizacoes() {
         let xhr = new XMLHttpRequest();
+
+        const pos = Math.floor(Math.random() * 95);
 
         xhr.onload = function () {
           let data = JSON.parse(this.responseText);
@@ -454,48 +482,56 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="card">
                 <img
-                  src="${data[0].avatar_url}"
+                  src="${data[pos + 0].avatar_url}"
                   class="card-img-top"
                 />
                 <div class="card-body">
-                  <h3 class="card-title" >${data[0].login}</h3>
-                  <h5 class="card-title" >${data[0].description ?? ""}</h5>
+                  <h3 class="card-title" >${data[pos + 0].login}</h3>
+                  <h5 class="card-title" >${
+                    data[pos + 0].description ?? ""
+                  }</h5>
                 </div>
               </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="card">
                 <img
-                  src="${data[1].avatar_url}"
+                  src="${data[pos + 1].avatar_url}"
                   class="card-img-top"
                 />
                 <div class="card-body">
-                  <h3 class="card-title" >${data[1].login}</h3>
-                  <h5 class="card-title" >${data[1].description ?? ""}</h5>
+                  <h3 class="card-title" >${data[pos + 1].login}</h3>
+                  <h5 class="card-title" >${
+                    data[pos + 1].description ?? ""
+                  }</h5>
                 </div>
               </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="card">
                 <img
-                  src="${data[2].avatar_url}"
+                  src="${data[pos + 2].avatar_url}"
                   class="card-img-top"
                 />
                 <div class="card-body">
-                  <h3 class="card-title" >${data[2].login}</h3>
-                  <h5 class="card-title" >${data[2].description ?? ""}</h5>
+                  <h3 class="card-title" >${data[pos + 2].login}</h3>
+                  <h5 class="card-title" >${
+                    data[pos + 2].description ?? ""
+                  }</h5>
                 </div>
               </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-3">
               <div class="card">
                 <img
-                  src="${data[3].avatar_url}"
+                  src="${data[pos + 3].avatar_url}"
                   class="card-img-top"
                 />
                 <div class="card-body">
-                  <h3 class="card-title" >${data[3].login}</h3>
-                  <h5 class="card-title" >${data[3].description ?? ""}</h5>
+                  <h3 class="card-title" >${data[pos + 3].login}</h3>
+                  <h5 class="card-title" >${
+                    data[pos + 3].description ?? ""
+                  }</h5>
                 </div>
               </div>
             </div>`;
@@ -509,7 +545,7 @@
           );
         };
 
-        xhr.open("GET", "https://api.github.com/organizations?per_page=4");
+        xhr.open("GET", "https://api.github.com/organizations?per_page=100");
         xhr.send();
       }
     </script>
